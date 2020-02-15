@@ -17,9 +17,11 @@ function mostrar() {
 
         contador++;
 
-        document.getElementById('suma').value = acumulador;
-        parseInt(document.getElementById('promedio').value) = acumulador / contador;
-
     }
+    
+    contador++;
+        document.getElementById('suma').value = acumulador;
+        parseInt(document.getElementById('promedio').value = acumulador / contador);
+
 
 }//FIN DE LA FUNCIÓN

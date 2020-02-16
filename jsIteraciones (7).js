@@ -19,7 +19,7 @@ function mostrar() {
 
     }
     
-    contador++;
+        contador++;
         document.getElementById('suma').value = acumulador;
         parseInt(document.getElementById('promedio').value = acumulador / contador);
 

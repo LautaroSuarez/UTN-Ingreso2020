@@ -8,43 +8,39 @@ function mostrar()
 	var cPositivos = 0;
 	var cNegativos = 0;
 	var ceros = 0;
-	var cNumerosPares = 0;
-	var promedioP;
-	var promedioN;
-	var diferenciasP;
-	var diferenciasN;
-	var pregunta = prompt("¿Quieres ingresar un número?");
-	var respuesta="si";
+    var cNumerosPares = 0;
+	var diferenciasPyN = 0;
+    
+    do {
 
-	while(pregunta == respuesta)
-	{
-		contador++;
-		var num = parseInt(prompt("Ingresar número."));
-		pregunta = prompt("¿Quieres ingresar otro número?");
+        var num = parseInt(prompt("Ingresar número."));
+        var pregunta = prompt("¿Quieres ingresar otro número?");
+        var respuesta = "si";
 
-		if(contador == 1){
-			positivos = num;
 
-		}
-		else if(contador > 1 && num < 0){	
+        if (num > 0) {
+            positivos += num;
+            cPositivos++;
+        }
+        else if (num < 0) {
+            negativos += num;
+            cNegativos++;
+        }
 
-			negativo += num;
-			cNegativos++;
-		}
-		else if(contador > 1 && num > 0){
+        diferenciasPyN = positivos - negativos;
 
-			positivo += num;
-			cPositivos++;
+        if (num == 0) {
+            ceros++;
+        }
 
-		}
-		else {
-			ceros++;
-			
-		}
-		if()
-	}
+        if (num % 2 == 0 & num != 0 || num % 2 == 0 && num != 0) {
+            cNumerosPares++;
+        }
 
-	document.write("1- La suma de los negativos es "+negativos+", la suma de los positivos es "+positivos+", la cantidad de positivos es de "+cPositivos+", la cantidad de negativos es de "+cNegativos+", la cantidad de ceros es de "+ceros+", la cantidad de números pares es de "+cNumerosPares+", el promedio de positivos es de "+promedioP+", el promedio de negativos es de "+promedioN+", la diferencia entre positivos y negativos es de "+diferenciasP+", y la diferencia entre negativos y positivos es de: "+diferenciasN);
+    }
+    while (pregunta == respuesta)
+
+    document.write("1- La suma de los negativos es " + negativos + "<br> 2- La suma de los positivos es " + positivos + "<br> 3- La cantidad de números positivos es " + cPositivos + "<br> 4- La cantidad de números negativos es " + cNegativos + "<br> 5- La cantidad de 0 es " + ceros + "<br> 6- La cantidad de números pares es " + cNumerosPares + "<br> 7- El promedio de los positivos es " + Math.round(positivos / cPositivos) + "<br> 8- El promedio de los negativos es " + Math.round(negativos / cNegativos) + "<br> 9- La diferencia entre positivos y negativos es " + diferenciasPyN);
 
 
 }//FIN DE LA FUNCIÓN

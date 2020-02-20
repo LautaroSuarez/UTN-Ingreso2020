@@ -7,7 +7,7 @@ function mostrar()
 
         if (pregunta == "9") {
 
-            contador = contador - 99999999999999999999;
+            break;
 
         }
 

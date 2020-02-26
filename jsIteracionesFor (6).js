@@ -1,29 +1,16 @@
 function mostrar()
 {
-    var NumeroPar = 0;
-    var NumerosEnPar;
-    var Numero = parseInt(prompt("Ingresar un número"));
+    var cont = 0;
+    var num = prompt("Numero","Ingresar un número");
 
+    for (var i = 0; i <= num; i++) {
 
-    for (Constante = 2; Constante <= Numero; Constante = Constante+ 2) {
+        if ((i % 2) == 0) {
 
-        if(Numero%2 == 0) {
-
-        NumerosEnPar = Numero%2 + Constante;
-
-        NumeroPar++;
-
-        document.write("Numeros pares "+NumerosEnPar+"<br>");
-        
+            alert("Es par: " + i);
+            cont++;
         }
-           
-        if (Constante >= Numero){
-            break;
-        }
-
     }
-
-    document.write("Cantidad de números pares "+NumeroPar);
-
+    alert("Se encontraron " + cont + " numeros pares.");
 
 }//FIN DE LA FUNCIÓN

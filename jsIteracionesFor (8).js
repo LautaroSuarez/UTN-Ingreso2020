@@ -1,22 +1,68 @@
-function mostrar()
-{
-    for (constante = 0; pregunta != "no" ; constante++) {
+function mostrar() {
 
-        var numero = parseInt(prompt("Ingresar un número."));
+    var num = prompt("Número","Ingresar un número.");
+    var flag = true;
 
-        if (numero % 2 == 0  && numero != 2) {
+    for (var i = 2; i <= num-1; i++) {
+
+        if (num % i == 0) {
+
+            flag = false;
+        }
+    }
+    if (flag == true) {
+
+        alert("El número " + num + " es primo.");
+
+    }
+
+    else {
+        alert("El numero " + num + "NO es primo");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+    /*
+
+  // for (i = 0; pregunta != "no"; i++) {
+     for (i = 2; i <= 0 ; i++) {
+
+  //       var numero = parseInt(prompt("Ingresar un número."));
+
+          if (numero % 2 == 0  && numero != 2) {
+  //      if ((numero%2)== 0 && (numero = 0 ) {
 
             alert("El número ingresado no es primo");
 
         }
-        else {
+                else {
 
             alert("El número ingresado es primo");
         
         }
 
-        var pregunta = prompt("¿Quieres ingresar otro número? si/no");
+    //    var pregunta = prompt("¿Quieres ingresar otro número? si/no");
 
     }
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN */

@@ -1,7 +1,7 @@
 function mostrar()
 {
 
-    for (contador = 0; contador >= 0; contador++) {
+    for (contador = 0; contador >= 0; contador++) {   // for(i=0, ; i++)
 
         var pregunta = prompt("Ingresar el número 9");
 
@@ -12,6 +12,7 @@ function mostrar()
         }
 
 
+  
     }
 
 

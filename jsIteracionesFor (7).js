@@ -7,12 +7,12 @@ function mostrar()
 
         if (numero % Constante == 0) {
 
-            document.write("Los números divisores son " + Constante + "<br>");
+            alert("Los números divisores son " + Constante );
             contador++;
         }
     }
 
-    document.write("La cantidad de numeros divisores es " + contador);
+    alert("La cantidad de numeros divisores es " + contador);
 
 
 

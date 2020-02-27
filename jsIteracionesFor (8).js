@@ -1,9 +1,9 @@
 function mostrar() {
 
-    var num = prompt("Número","Ingresar un número.");
+    var num = prompt("Ingresar un número.");
     var flag = true;
 
-    for (var i = 2; i <= num-1; i++) {
+    for (i = 2; i <= num-1; i++) {
 
         if (num % i == 0) {
 
@@ -40,7 +40,7 @@ function mostrar() {
 
 
 
-}
+// }
 
     /*
 

@@ -1,21 +1,21 @@
 
 function mostrar()
 {
-    do {
 var contadorDeReservas = 0;
 var nombre;
-var cantidadDePersonas;
-var cantidadDeDiasDeEstadia;
+var cantidadDePersonas = 0;
+var cantidadDiasEstadia = 0;
 var formaDePago;
-var maximoCantidadDePersonas;
-var maximoCantidadDePersonasHuesped;
-var maximoDeDias;
-var maximoDeDiasCantidadPersonas;
+var maximoCantidadDePersonas = 0;
+var maximoCantidadDePersonasHuesped = 0;
+var maximoDeDias = 0;
+var maximoDiasCantidadPersonas = 0;
 var contadorQR;
 var contadorEfectivo;
 var contadorTarjeta;
-var respuesta;
 var formaDePagoMasUsada;
+var acumuladorDeDias;
+var respuesta;
 var promedio;
 
         contadorEfectivo = 0;
@@ -23,11 +23,11 @@ var promedio;
         contadorQR = 0;
         acumuladorDeDias = 0;
 
-respuesta = "s";
+respuesta == "s";
 
-contadorDeReservas++;
-
-var nombre = prompt("Ingresar nombre del huesped");
+do {
+    contadorDeReservas++;
+ nombre = prompt("Ingresar nombre del huesped");
 
     while (!isNaN(nombre)){
 
@@ -35,17 +35,17 @@ var nombre = prompt("Ingresar nombre del huesped");
     nombre = prompt("Ingresar nombre del huesped. 2");
 }
 
-var cantidadPersonas = parseInt(prompt("Ingresar la cantidad de personas."));
+ cantidadDePersonas = parseInt(prompt("Ingresar la cantidad de personas."));
 
-    while (isNaN(cantidadPersonas)){
+    while (isNaN(cantidadDePersonas) || cantidadDePersonas < 1){
 
     alert("Reintentar. Ingresó un dato invalido.");
     cantidadPersonas = parseInt(prompt("Ingresar la cantidad de personas"));
 }
 
-var cantidadDiasEstadia = parseInt(prompt("Ingresar la cantidad de días de estadia"));
+ cantidadDiasEstadia = parseInt(prompt("Ingresar la cantidad de días de estadia"));
 
-    while (isNaN(cantidadDiasEstadia)){
+    while (isNaN(cantidadDiasEstadia) || cantidadDiasEstadia <1){
 
     alert("Reintentar. Ingresó un dato invalido");
     cantidadDiasEstadia = parseInt(prompt("Ingresar la cantidad de días de estadia"));
@@ -62,7 +62,7 @@ if (contadorDeReservas == 1 || maximoCantidadDePersonas < cantidadDePersonas){
 }
 if(contadorDeReservas == 1 || maximoDeDias < cantidadDiasEstadia){
 maximodeDias = cantidadDiasEstadia;
-maximoDiasCantidadDePersonas = cantiadDePersonas;
+maximoDiasCantidadPersonas = cantidadDePersonas;
 
 }
 switch(formaDePago){
@@ -78,32 +78,47 @@ switch(formaDePago){
     break;
 
 }
-cantidadDeDias = acumuladorDeDias + cantidadDeDias;
+ cantidadDiasEstadia = acumuladorDeDias + cantidadDiasEstadia;
 
-var pregunta = prompt("¿Quieres seguir ingresando datos? s/n")
+//var respuesta = prompt("¿Quieres ingresar más datos?");
+ respuesta = prompt("¿Quieres ingresar más datos?");
 
- /*while(!isNaN(pregunta)) {
-
-
-} */ 
- } while (pregunta == respuesta)
+ } while (respuesta == "s")
 
  promedio = acumuladorDeDias/contadorDeReservas;
 
 if(contadorQR > contadorEfectivo && contadorQR > contadorTarjeta){
 
-formaDePagoMasUsada = "qr";
+    formaDePagoMasUsada = "qr";
 
 }
 else {
 
     if(contadorTarjeta > contadorEfectivo){
 
-        formaDePagoMasUsada = "efectivo";
-    }
-    else {
         formaDePagoMasUsada = "tarjeta";
     }
-}
+    else {
+        formaDePagoMasUsada = "efectivo";
+        }
+    }
+
+    alert("El huesped que trajo más personas es "+maximoCantidadDePersonasHuesped);
+    alert("La cantidad de personas que se quedaron más días es de "+maximoDiasCantidadPersonas);
+    alert("La forma de pago más utilizada es "+formaDePagoMasUsada);
+    alert("El promedio de la cantidad de dias por reserva es de "+promedio);
+
  }
 
+/* VALIDAR // ESCRIBIR DE ESTA FORMA CON LA VARIABLE QUE QUEREMOS VALIDAR EN WHILE //
+
+
+cantidadDePersonas = prompt (cantidadDePersonas);
+cantidadDePersonas = parseInt(cantidadDePersonas);
+
+while(isNaN(cantidadDePersonas) || cantidadDePersonas < 0){
+
+cantidadDePersonas = prompt (cantidadDePersonas);
+cantidadDePersonas = parseInt(cantidadDePersonas);
+
+ }    */

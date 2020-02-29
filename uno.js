@@ -1,7 +1,7 @@
 
 function mostrar()
 {
-var contadorDeReservas = 0;
+var contadorDeReservas;
 var nombre;
 var cantidadDePersonas = 0;
 var cantidadDiasEstadia = 0;
@@ -14,7 +14,7 @@ var contadorQR;
 var contadorEfectivo;
 var contadorTarjeta;
 var formaDePagoMasUsada;
-var acumuladorDeDias;
+var acumuladorDeDias;                                         // RESOLVER ESTO PARA SACAR PROMEDIO 
 var respuesta;
 var promedio;
 

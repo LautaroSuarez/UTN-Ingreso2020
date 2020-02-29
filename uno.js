@@ -4,7 +4,7 @@ function mostrar()
 var contadorDeReservas;
 var nombre;
 var cantidadDePersonas = 0;                                   // RESOLVER PORQUE SOLO TOMA EL ÚLTIMO NÚMERO INGRESADO
-var cantidadDiasEstadia = 0;
+var cantidadDiasEstadia = 0;                                  // HACER EL PARCIAL 9
 var formaDePago;
 var maximoCantidadDePersonas = 0;
 var maximoCantidadDePersonasHuesped = 0;
@@ -84,7 +84,7 @@ switch(formaDePago){
  respuesta = prompt("¿Quieres ingresar más datos?");
 
  } while (respuesta == "s")
-
+// acumuladorDeDias = acumuladorDeDias + acumuladorDeDias;
  promedio = acumuladorDeDias/contadorDeReservas;
 
 if(contadorQR > contadorEfectivo && contadorQR > contadorTarjeta){

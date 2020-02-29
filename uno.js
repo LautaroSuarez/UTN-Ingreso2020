@@ -18,6 +18,11 @@ var respuesta;
 var formaDePagoMasUsada;
 var promedio;
 
+        contadorEfectivo = 0;
+        contadorDeReservas = 0;
+        contadorQR = 0;
+        acumuladorDeDias = 0;
+
 respuesta = "s";
 
 contadorDeReservas++;

@@ -3,7 +3,7 @@ function mostrar()
 {
 var contadorDeReservas;
 var nombre;
-var cantidadDePersonas = 0;
+var cantidadDePersonas = 0;                                   // RESOLVER PORQUE SOLO TOMA EL ÚLTIMO NÚMERO INGRESADO
 var cantidadDiasEstadia = 0;
 var formaDePago;
 var maximoCantidadDePersonas = 0;

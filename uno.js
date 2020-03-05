@@ -27,12 +27,13 @@ respuesta == "s";
 
 do {
     contadorDeReservas++;
- nombre = prompt("Ingresar nombre del huesped");
+
+    nombre = prompt("Ingresar nombre del huesped");
 
     while (!isNaN(nombre)){
 
     alert("Reintentar. Ingresó un dato invalido.");
-    nombre = prompt("Ingresar nombre del huesped. 2");
+    nombre = prompt("Ingresar nombre del huesped.");
 }
 
  cantidadDePersonas = parseInt(prompt("Ingresar la cantidad de personas."));
@@ -60,10 +61,9 @@ if (contadorDeReservas == 1 || maximoCantidadDePersonas < cantidadDePersonas){
     maximoCantidadDePersonas = cantidadDePersonas;
     maximoCantidadDePersonasHuesped = nombre;
 }
-if(contadorDeReservas == 1 || maximoDeDias < cantidadDiasEstadia){
-maximodeDias = cantidadDiasEstadia;
-maximoDiasCantidadPersonas = cantidadDePersonas;
-
+if(contadorDeReservas == 1 || cantidadDiasEstadia > maximoDeDias){
+    maximodeDias = cantidadDiasEstadia;
+    maximoDiasCantidadPersonas = cantidadDePersonas;
 }
 switch(formaDePago){
 
@@ -78,7 +78,7 @@ switch(formaDePago){
     break;
 
 }
- cantidadDiasEstadia = acumuladorDeDias + cantidadDiasEstadia;
+ acumuladorDeDias = acumuladorDeDias + cantidadDiasEstadia;
 
 //var respuesta = prompt("¿Quieres ingresar más datos?");
  respuesta = prompt("¿Quieres ingresar más datos?");
